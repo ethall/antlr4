@@ -585,7 +585,7 @@ ThisRulePropertyRef_parser(r) ::= "this"
 NonLocalAttrRef(s) ::= "getInvokingContext(<s.ruleIndex>).<s.name>"
 SetNonLocalAttr(s, rhsChunks) ::= "getInvokingContext(<s.ruleIndex>).<s.name> = <rhsChunks>"
 
-AddToLabelList(a ::= "<ctx(a.label)>.<a.listName>.push(<labelref(a.label)>);"
+AddToLabelList(a) ::= "<ctx(a.label)>.<a.listName>.push(<labelref(a.label)>);"
 
 TokenDecl(t) ::= "this.<t.name> = null; // <TokenLabelType()>"
 TokenTypeDecl(t) ::= "let <t.name> = 0; // <TokenLabelType()> type"
